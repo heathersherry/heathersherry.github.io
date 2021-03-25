@@ -1,0 +1,34 @@
+Data sample:
+
+{	"Alessandria": 
+	{	"Q6088": [83, ["Q747074"]], 
+		"Q15097": [238, ["Q15089"]], 
+		"Q18500890": [5, ["Q486972"]], 
+		"Q18438850": [6, ["Q486972"]], 
+		"Q18504696": [6, ["Q486972"]], 
+		"Q38914574": [4, ["Q60186"]], 
+		"Q18935892": [9, ["Q79007"]], 
+		"Q430988": [38, ["Q747074"]], 
+		"Q53824": [36, ["Q747074"]], 
+		"Q3743285": [9, ["Q728937"]], 
+		"Q612475": [9, ["Q728937"]]}}
+{	"Darth Vader": 
+	{	"Q12206942": 	[49, ["Q15632617", "Q33125444"]], 
+		"Q51752": [41, ["Q15632617", "Q51724", "Q33125444"]], 
+		"Q47512405": [9, ["Q3305213"]], 
+		"Q2061833": [13, ["Q833053"]], 
+		"Q5225625": [11, ["Q860861"]], 
+		"Q5225624": [12, ["Q11424"]], 
+		"Q58578481": [12, ["Q13442814"]], 
+		"Q16774805": [1, ["Q4167410"]], 
+		"Q3284124": [18, ["Q47461344"]]}}
+{	"Princess Leia": 
+	{	"Q51797": [52, ["Q15632617", "Q15773347", "Q33125444"]], 
+		"Q15136385": [8, ["Q14090"]]}}
+
+
+Data format:
+The file '*_Wikidata_noun_records.json' records the candidate entities for each noun phrase. 
+For each noun phrase, we record a list of candidate entities. For each entity, we record their supporting statements and list of types. In the example listed above, "Alessandria" has some candidate entities ("Q6088", "Q15097", and "Q18500890" ...), while the entity "Q6088" has 83 supportings statement, and its type is "Q747074". 
+Specifically, some of the entity may have multiple types. For example, the entity "Q12206942" (the first candidate entity of "Darth Vader") have two different types, "Q15632617" and "Q33125444".
+

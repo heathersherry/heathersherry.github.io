@@ -1,0 +1,34 @@
+Data sample:
+
+{	"triple_norm": ["mr. trump", "target", "mr. tester"], 
+	"triple": ["Mr. Trump", " targeting", " Mr. Tester"], 
+	"src_sentences": ["\"I'm here because I can never forget what Jon Tester did to a man who's of the highest quality,\" Mr. Trump said, again targeting Mr. Tester as the catalyst for the failed nomination of Dr. Jackson."], 
+	"src_domain": "politics", 
+	"src_document": "2018-10-19-'That's My Kind of Guy,' Trump Says of Republican Lawmaker Who Body-Slammed a Reporter .txt", 
+	"nouns": [["PERSON", "Ronny L. Jackson"], ["PERSON", "Trump"], ["PERSON", "Jon Tester"]], 
+	"_id": 34
+}
+{	"triple_norm": ["mr. assange", "have live in", "ecuadorean embassy"], 
+	"triple": ["Mr. Assange", " has lived in", " Ecuadorean Embassy"], 
+	"src_sentences": ["Mr. Assange has lived for years in the Ecuadorean Embassy in London and would have to be arrested and extradited if he were to face charges in federal court, altogether a multistep diplomatic and legal process."], 
+	"src_domain": "politics", 
+	"src_document": "2018-11-16-Assange Is Secretly Charged in U.S., Prosecutors Mistakenly Reveal .txt", 
+	"nouns": [["GPE", "London"], ["PERSON", "Julian Assange"], ["LOCATION", "Ecuadorean Embassy"]], 
+	"_id": 58
+}
+
+
+
+Data format:
+* '_id' unique id of each triple in the Knowledge Graph.
+* 'triple' denotes the actual triple in the Knowledge Graph
+* 'triple_norm' denotes the normalized form of the triple (after lemmatization, lower casing ...)
+* 'src_sentences' is the list of sentences from which the triple was extracted by Open IE algorithms.
+* 'src_document' is the source document.
+* 'src_domain' is the domain of the source document, labeled by NYTimes.
+* 'nouns' denotes the extracted named entity mentions (noun phrases) detected in src sentences.
+
+Note: For the context in 'nouns', we follow two principles to extract noun phrases that existed in the source sentence:
+1. We remove the titles such as "Mr.", "Ms." and "President" in the noun phrases. For example, we record "Trump" instead of "Mr. Trump".
+2. We assume that a fimily name in one aricle refers to only one person. For example, in the document "2018-11-16-Assange Is Secretly Charged in U.S., Prosecutors Mistakenly Reveal .txt", both "Mr. Assange" and "Assange" refer to "Julian Assange".
+

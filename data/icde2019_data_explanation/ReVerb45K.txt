@@ -1,0 +1,31 @@
+Data sample:
+
+{	"triple_norm": ["darth vader", "be once know as", "anakin skywalker"], 
+	"true_link": {"object": "/m/0f2y0", "subject": "/m/0f2y0"}, 
+	"src_sentences": ["Darth Vader was once known as Anakin Skywalker", "Darth Vader was once known as Anakin Skywalker. He wined alot and complained. He said the word &quot;master&quot; alot and lost over half his jedi duels. However, during a duel with his master, he forgot that the high ground gives you an Agility bonus. He was pwned two seconds later, after yelling &quot;You underestimate my... PoWeRr!&quot; No one is really sure how Darth Vader went from being a total emo bitch who whined and threw tantrums, to a total bad-ass who was calm about being shocked by thousands of volts of electricity."], 
+	"triple": ["Darth Vader", "was once known as", "Anakin Skywalker"], 
+	"kbp_info": [["PERSON", "per:alternate_names", "PERSON"]], 
+	"entity_linking": {"object": "Anakin_Skywalker", 
+	"subject": "Darth_Vader"}, "_id": 26995, 
+	"nouns": [["PERSON", "Anakin Skywalker"], ["PERSON", "Darth Vader"]]
+}
+{	"triple_norm": ["george gershwin", "grow up in", "new york city"], 
+	"true_link": {"object": "/m/02_286", "subject": "/m/03f4k"}, 
+	"src_sentences": ["George Gershwin grew up in New York City", "America, I Hear You: George Gershwin by Barbara Mitchell. RC 27710 George Gershwin grew up in New York City, where he came to love the jazz music of Harlem and the classical music taught by his piano teachers. When he was fifteen he quit school and went to work as a &quot;plugger&quot; for a music publisher. For grades 2-4."], 
+	"triple": ["George Gershwin", "grew up in", "New York City"], 
+	"kbp_info": [["PERSON", "per:cities_of_residence", "LOCATION"], ["PERSON", "per:cities_of_residence", "LOCATION"], ["PERSON", "per:cities_of_residence", "LOCATION"]], 
+	"entity_linking": {"object": "New_York_City", "subject": "George_Gershwin"}, 
+	"_id": 39476, 
+	"nouns": [["PERSON", "George Gershwin"], ["PERSON", "Barbara Mitchell"], ["GPE", "Harlem"], ["GPE", "America"], ["GPE", "New York City"]]
+}
+
+Data format:
+* '_id' unique id of each triple in the Knowledge Graph.
+* 'triple' denotes the actual triple in the Knowledge Graph
+* 'triple_norm' denotes the normalized form of the triple (after lemmatization, lower casing ...)
+* 'true_link' is the gold canonicalization of subject and object. For relations gold linking is not available.
+* 'src_sentences' is the list of sentences from which the triple was extracted by Open IE algorithms.
+* 'entity_linking' is the Entity Linking side information which is utilized by CESI.
+* 'kbp_info' is the Knowledge-Base Propagation side information used by CESI.
+* 'nouns' denotes the extracted named entity mentions (noun phrases) detected in src sentences.
+

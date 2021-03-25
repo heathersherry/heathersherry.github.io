@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Xueling Lin | The Hong Kong University of Science and Technology | CSE | HKUST</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="image avatar"><img src="images/sherry4.jpg" alt="" /></a>
+				<h1><strong>Xueling LIN (Sherry)</strong></h1>
+				<h1><strong>Ph.D Student</strong></h1>
+				<h1><strong>CSE, HKUST</strong></h1>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+
+                    
+					<!-- Dataset -->
+					<section id="dataset">
+						<header class="major">
+							<h3><strong>Datasets for KBPearl (VLDB 2020)</strong></h3>
+						</header>
+
+						<p>I use two major datasets for my research in canonicalization of open knowledge bases. The details of both datasets and the side information are listed as follows:</p>
+							<ul>
+								<li> ReVerb45K: This is a new Open KB canonicalization dataset proposed by <a href = 'http://malllabiisc.github.io/publications/papers/cesi_www18.pdf'>CESI</a> and has been published by the authors. ReVerb45K is constructed based on Reverb Open KB, Clueweb09 corpus, as well as Freebase entity linking information. 
+									<ul>
+										<li><a href = 'https://drive.google.com/open?id=1lX7NIvt7q6mGcGI2gB16gQ-Qox1f3Nwh'>[ReVerb45K Dataset (enriched)]</a>
+										<a href = 'data/icde2019_data_explanation/ReVerb45K.txt'>[Data Description]</a></li>
+									</ul>
+								</li>
+
+								<li> NYTimes2018: We collect this dataset from nytimes.com in 2018. This dataset contains news articles from 5 different domains, including sports, arts, business, science and health. We collect 500 articles and apply Stanford Open IE Tool on this article to produce Open IE triples.
+									<ul>
+										<li><a href = 'https://drive.google.com/open?id=1r3K7dvwgZR6ZNC54kNcwxe_Lk3RoJiUj'>[NYTimes2018 Original News Corpora]</a></li>
+										<li><a href = 'https://drive.google.com/open?id=1QmqEjcU_wFX18B7dg3ZwJWadj7mNRUXn'>[NYTimes2018 Dataset]</a>
+										<a href = 'data/icde2019_data_explanation/NYTimes2018.txt'>[Data Description]</a></li>
+									</ul>
+								</li>
+
+								<li> Side Information: For both datasets, we obtain the side information for each source text as follows. First, we apply <a href = 'https://www.nltk.org/'>NLTK</a> to recognize the named entity mentions (with PERSON, ORGANIZATION, LOCATION... as the types) in the source text. We then use <a href="https://github.com/SuLab/WikidataIntegrator"> Wikidata Integrator</a> to link each named entity mention to a list of candidate entities in <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>.
+									<ul>
+										<li><a href = 'https://drive.google.com/open?id=1k41_lE3p6hVJl4LnlTGor3zGChjhYRk7'>[Detailed Noun Info]</a><a href = 'data/icde2019_data_explanation/Wikidata_entity_description.txt'>[Data Description for *_Wikidata_entity_description]</a><a href = 'data/icde2019_data_explanation/Wikidata_noun_records.txt'>[Data Description for *_Wikidata_noun_records]</a></li>
+
+										<li><a href = 'https://drive.google.com/open?id=19gwlbJKKJYllc8yfS8rZwdwNChM0I8Kk'>[Domain Keywords]</a></li>
+										<li><a href="https://drive.google.com/open?id=10ACdKhPEszteGDfLqTyDoN0Lx10cbm6x">[Patty Dataset]</a> (This is a dataset published by the authors of "PATTY: A Taxonomy of Relational Patterns with Semantic Types" (EMNLP 2012). You can also download the original dataset from <a href = 'https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/patty/'>mpi-inf</a>)</li>
+									
+									</ul>
+								</li>
+
+							</ul>
+
+						<ul>
+						<li>Note 1: This dataset accompanies the publication below. Please cite this publication if you use the data above: Xueling Lin, and Lei Chen. "Canonicalization of Open Knowledge Bases with Side Information from Source Text.", In 2019 IEEE 35th International Conference on Data Engineering (ICDE) (pp. 950-961). More detail about the datasets listed above are available in this paper.
+						</li>
+						<li>Note 2: All the datasets can only be used for research purpose.
+						</ul>
+
+						<header class="major">
+							<h3><strong>Corrections (of the original paper)</strong></h3>
+						</header>
+
+						<p>We have fixed two typos in the first version of the orginal paper.</p>
+
+						<ul>
+							<li>Section 4.2, line #3 in the last paragraph, $p_i$ should be $p_j$.</li>
+							<li>Table 2, for the dataset LC-QuAD2.0, the F1 score of KBPearl-PP and KBPearl-NN should be 0.518 instead of 0.410.</li>
+						</ul>
+
+					</section>
+
+
+
+
+
+
+
+
+
+				
+
+			</div>
+			
+		<!-- Footer --><!--
+			<footer id="footer">
+				<ul class="icons">
+
+					<li><a href="https://www.instagram.com/heathersherrylin/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					Last updated by Xueling Lin on Jun 30, 2018
+				</ul>
+			</footer>-->
+
+	</body>
+</html>

@@ -1,0 +1,13 @@
+Data sample:
+
+{	"Q11148": 	[["type of newspaper usually published daily"], 
+				"British national daily newspaper"]}
+{	"Q157509": 	[["office with a set of powers and responsibilities within a private or public organization or the state"], 
+				"person who has the legal authority to care for the personal and property interests of another person"]}
+{	"Q5614018": [["set of related web pages served from a single web domain"], 
+				"news website"]}
+
+Data format:
+The file '*_Wikidata_entity_description.json' records the detailed description of each candidate entity.
+For each entity, we record a list of the descriptions of its type, as well as its own description. 
+In the example listed above, the desciption of the type of "Q11148" is "type of newspaper usually published daily", and the desciption of "Q11148" is "British national daily newspaper".
