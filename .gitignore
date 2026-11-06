@@ -1,0 +1,14 @@
+# macOS folder metadata
+.DS_Store
+
+# Unused personal photos kept locally
+/images/sherry1.jpg
+/images/sherry2.jpg
+/images/sherry4.jpg
+
+# Unused template images and logos kept locally
+/images/avatar.jpg
+/images/cselogo.png
+/images/hkustlogo.png
+/images/fulls/
+/images/thumbs/

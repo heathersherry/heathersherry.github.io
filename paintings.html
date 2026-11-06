@@ -1,111 +1,156 @@
 <!DOCTYPE HTML>
-<html>
+
+<html lang="en">
 	<head>
-		<title>Xueling Lin | The Hong Kong University of Science and Technology | CSE | HKUST</title>
+		<title>Painting Gallery | Xueling Lin</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
+		<meta name="description" content="Paintings by Xueling Lin (Sherry)." />
 		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
+			<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+			<!-- CSS files loaded immediately to prevent FOUC -->
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+			<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.poptrox.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/init.js"></script>
+		<link rel="stylesheet" href="css/gallery.css" />
+		<script src="js/gallery.js" defer></script>
 	</head>
-	<body id="top">
-
-		<!-- Header -->
-			<header id="header">
-				<a href="#" class="image avatar"><img src="images/sherry3.jpg" alt="" /></a>
-				<h1><strong>Xueling LIN (Sherry)</strong></h1>
-				<h1><strong>Ph.D Student</strong></h1>
-				<h1><strong>CSE, HKUST</strong></h1>
+	<body id="top" class="gallery-page">
+    <header id="header" class="has-navigation">
+				<a href="index.html" class="image avatar"><img src="images/sherry3.jpg" alt="Xueling Lin" /></a>
+				<h1><strong>Xueling LIN</strong></h1>
+				<h1><strong>Researcher</strong></h1>
+				<h1><strong>Huawei</strong></h1>
+				<nav class="site-navigation" aria-label="Site navigation">
+					<a href="index.html#experience">About me</a>
+					<a href="index.html#publications">Publications</a>
+					<a href="index.html#teaching">Teaching Assistant</a>
+					<a href="paintings.html" aria-current="page">Painting Gallery</a>
+				</nav>
 			</header>
+    <main id="main">
+      <section id="painting" aria-labelledby="gallery-title">
+        <header class="major">
+          <h3 id="gallery-title"><strong>Painting Gallery</strong></h3>
+        </header>
+        <p class="gallery-help">Click a painting to view it full size.</p>
+        <div class="gallery-grid">
+      <figure class="artwork">
+        <a class="artwork-image" href="images/painting/hkust2.jpeg" data-gallery aria-label="View HKUST, Mar 2020">
+          <img src="images/painting/hkust2.jpeg" width="1440" height="1080" alt="The HKUST campus beneath a blue sky" fetchpriority="high" decoding="async">
+          <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
+        </a>
+        <figcaption>
+          <h3 class="artwork-title">HKUST</h3>
+          <time datetime="2020-03">Mar 2020</time>
+        </figcaption>
+      </figure>
+      <figure class="artwork">
+        <a class="artwork-image" href="images/painting/hkust.jpeg" data-gallery aria-label="View HKUST, Feb 2020">
+          <img src="images/painting/hkust.jpeg" width="2292" height="1080" alt="The HKUST campus and its sweeping view of the bay" loading="lazy" decoding="async">
+          <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
+        </a>
+        <figcaption>
+          <h3 class="artwork-title">HKUST</h3>
+          <time datetime="2020-02">Feb 2020</time>
+        </figcaption>
+      </figure>
+      <figure class="artwork">
+        <a class="artwork-image" href="images/painting/sunset.jpeg" data-gallery aria-label="View Sunset, Jul 2020">
+          <img src="images/painting/sunset.jpeg" width="1628" height="1080" alt="A sunset reflected over the sea" loading="lazy" decoding="async">
+          <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
+        </a>
+        <figcaption>
+          <h3 class="artwork-title">Sunset</h3>
+          <time datetime="2020-07">Jul 2020</time>
+        </figcaption>
+      </figure>
+      <figure class="artwork">
+        <a class="artwork-image" href="images/painting/jupyter.jpeg" data-gallery aria-label="View Wandering Earth and Jupyter, Feb 2020">
+          <img src="images/painting/jupyter.jpeg" width="1527" height="1080" alt="An imagined scene of planets in space" loading="lazy" decoding="async">
+          <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
+        </a>
+        <figcaption>
+          <h3 class="artwork-title">Wandering Earth and Jupyter</h3>
+          <time datetime="2020-02">Feb 2020</time>
+        </figcaption>
+      </figure>
+      <figure class="artwork">
+        <a class="artwork-image" href="images/painting/mountains.jpeg" data-gallery aria-label="View Mountains, Jan 2018">
+          <img src="images/painting/mountains.jpeg" width="3096" height="2044" alt="Mountains beneath a cloud-filled sky" loading="lazy" decoding="async">
+          <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
+        </a>
+        <figcaption>
+          <h3 class="artwork-title">Mountains</h3>
+          <time datetime="2018-01">Jan 2018</time>
+        </figcaption>
+      </figure>
+      <figure class="artwork">
+        <a class="artwork-image" href="images/painting/1.JPG" data-gallery aria-label="View Little Prince, Apr 2016">
+          <img src="images/painting/1.JPG" width="2048" height="1536" alt="The Little Prince and a fox beneath a starry sky" loading="lazy" decoding="async">
+          <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
+        </a>
+        <figcaption>
+          <h3 class="artwork-title">Little Prince</h3>
+          <time datetime="2016-04">Apr 2016</time>
+        </figcaption>
+      </figure>
+      <figure class="artwork">
+        <a class="artwork-image" href="images/painting/5.JPG" data-gallery aria-label="View Coco, Jan 2018">
+          <img src="images/painting/5.JPG" width="2048" height="1600" alt="Painting titled Coco" loading="lazy" decoding="async">
+          <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
+        </a>
+        <figcaption>
+          <h3 class="artwork-title">Coco</h3>
+          <time datetime="2018-01">Jan 2018</time>
+        </figcaption>
+      </figure>
+      <figure class="artwork">
+        <a class="artwork-image" href="images/painting/6.JPG" data-gallery aria-label="View Earth, Dec 2017">
+          <img src="images/painting/6.JPG" width="2048" height="1536" alt="Painting titled Earth" loading="lazy" decoding="async">
+          <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
+        </a>
+        <figcaption>
+          <h3 class="artwork-title">Earth</h3>
+          <time datetime="2017-12">Dec 2017</time>
+        </figcaption>
+      </figure>
+      <figure class="artwork">
+        <a class="artwork-image" href="images/painting/2.jpg" data-gallery aria-label="View Portrait, 2016">
+          <img src="images/painting/2.jpg" width="1536" height="2048" alt="Portrait study from 2016" loading="lazy" decoding="async">
+          <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
+        </a>
+        <figcaption>
+          <h3 class="artwork-title">Portrait</h3>
+          <time datetime="2016">2016</time>
+        </figcaption>
+      </figure>
+      <figure class="artwork">
+        <a class="artwork-image" href="images/painting/3.jpg" data-gallery aria-label="View Portrait, 2017">
+          <img src="images/painting/3.jpg" width="1536" height="2048" alt="Portrait study from 2017" loading="lazy" decoding="async">
+          <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
+        </a>
+        <figcaption>
+          <h3 class="artwork-title">Portrait</h3>
+          <time datetime="2017">2017</time>
+        </figcaption>
+      </figure>
+        </div>
+      </section>
+    </main>
 
-		<!-- Main -->
-			<div id="main">
-
-
-                    
-					<!-- Personal Life -->
-					<section id="painting">
-						<header class="major">
-							<h3><strong>My Paintings</strong></h3>
-						</header>
-
-
-						<div class="row">
-							
-							<article class="6u 12u$(3) work-item">
-								<a href="images/painting/hkust2.jpeg" class="image fit thumb"><img src="images/painting/hkust2.jpeg"  height="400" alt="" /></a>
-								<h3>HKUST</h3>
-								<p>Mar 2020</p>
-							</article>
-
-							<article class="6u 12u$(3) work-item">
-								<a href="images/painting/hkust.jpeg" class="image fit thumb"><img src="images/painting/hkust.jpeg"  height="400" alt="" /></a>
-								<h3>HKUST</h3>
-								<p>Feb 2020</p>
-							</article>
-
-							<article class="6u 12u$(3) work-item">
-								<a href="images/painting/sunset.jpeg" class="image fit thumb"><img src="images/painting/sunset.jpeg"  height="400" alt="" /></a>
-								<h3>Sunset</h3>
-								<p>Jul 2020</p>
-							</article>
-
-							<article class="6u 12u$(3) work-item">
-								<a href="images/painting/jupyter.jpeg" class="image fit thumb"><img src="images/painting/jupyter.jpeg"  height="400" alt="" /></a>
-								<h3>Wandering Earth and Jupyter</h3>
-								<p>Feb 2020</p>
-							</article>
-
-							<article class="6u 12u$(3) work-item">
-								<a href="images/painting/mountains.jpeg" class="image fit thumb"><img src="images/painting/mountains.jpeg" height="400" alt="" /></a>
-								<h3>Mountains</h3>
-								<p>Jan 2018</p>
-							</article>
-
-							<article class="6u 12u$(3) work-item">
-								<a href="images/painting/1.JPG" class="image fit thumb"><img src="images/painting/1.JPG" height="400" alt="" /></a>
-								<h3>Little Prince</h3>
-								<p>Apr 2016</p>
-							</article>
-							<article class="6u 12u$(3) work-item">
-								<a href="images/painting/5.JPG" class="image fit thumb"><img src="images/painting/5.JPG" height="400" alt="" /></a>
-								<h3>Coco</h3>
-								<p>Jan 2018</p>
-							</article>
-							<article class="6u 12u$(3) work-item">
-								<a href="images/painting/6.JPG" class="image fit thumb"><img src="images/painting/6.JPG" height="400" alt="" /></a>
-								<h3>Earth</h3>
-								<p>Dec 2017</p>
-							</article>
-
-							<article class="6u 12u$(3) work-item">
-								<a href="images/painting/2.jpg" class="image fit thumb"><img src="images/painting/2.jpg" height="600" alt="" /></a>
-								<h3>Protrait</h3>
-								<p>2016</p>
-							</article>
-							<article class="6u 12u$(3) work-item">
-								<a href="images/painting/3.jpg" class="image fit thumb"><img src="images/painting/3.jpg" height="600" alt="" /></a>
-								<h3>Protrait</h3>
-								<p>2017</p>
-							</article>
-						</div>
-					</section>
-
-
-				
-
-			</div>
-			
-		
-
-	</body>
+  <dialog class="lightbox" aria-label="Painting viewer" aria-describedby="viewer-caption">
+    <div class="lightbox-top"><span>Paintings</span><button class="viewer-close" type="button" aria-label="Close painting viewer" autofocus>Close <span aria-hidden="true">×</span></button></div>
+    <div class="lightbox-canvas"><img class="lightbox-image" alt=""></div>
+    <div class="lightbox-bottom">
+      <div id="viewer-caption" aria-live="polite" aria-atomic="true"><h2 class="viewer-title"></h2><p class="viewer-date"></p></div>
+      <div class="viewer-navigation"><button class="viewer-previous" type="button" aria-label="Previous painting">←</button><span class="viewer-count"></span><button class="viewer-next" type="button" aria-label="Next painting">→</button></div>
+      <a class="viewer-original" href="images/painting/sunset.jpeg" target="_blank" rel="noopener">Open original <span aria-hidden="true">↗</span></a>
+    </div>
+  </dialog>
+  </body>
 </html>
