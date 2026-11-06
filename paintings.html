@@ -9,15 +9,15 @@
 			<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 			<!-- CSS files loaded immediately to prevent FOUC -->
 			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style.css?v=40a63cbd328d" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 			<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 			<script src="js/jquery.min.js"></script>
 			<script src="js/jquery.poptrox.min.js"></script>
 			<script src="js/skel.min.js"></script>
-			<script src="js/init.js"></script>
-		<link rel="stylesheet" href="css/gallery.css" />
-		<script src="js/gallery.js" defer></script>
+			<script src="js/init.js?v=62f7c0d84b0f"></script>
+		<link rel="stylesheet" href="css/gallery.css?v=a62c9cf41107" />
+		<script src="js/gallery.js?v=f418a6372260" defer></script>
 	</head>
 	<body id="top" class="gallery-page">
     <header id="header" class="has-navigation">
@@ -37,15 +37,23 @@
         <header class="major">
           <h3 id="gallery-title"><strong>Painting Gallery</strong></h3>
         </header>
-        <p class="gallery-help">Click a painting to view it full size.</p>
-        <div class="gallery-grid">
+        <div class="gallery-tabs" role="tablist" aria-label="Painting categories">
+          <button type="button" role="tab" id="tab-ipad" aria-controls="ipad-paintings" aria-selected="true" tabindex="0">iPad Paintings</button>
+          <button type="button" role="tab" id="tab-oil-pastels" aria-controls="oil-pastels" aria-selected="false" tabindex="-1">Oil Pastels</button>
+          <button type="button" role="tab" id="tab-acrylic-markers" aria-controls="acrylic-markers" aria-selected="false" tabindex="-1">Acrylic Markers</button>
+          <button type="button" role="tab" id="tab-watercolors" aria-controls="watercolors" aria-selected="false" tabindex="-1">Watercolors</button>
+        </div>
+        <section id="ipad-paintings" class="gallery-category" role="tabpanel" aria-labelledby="tab-ipad" tabindex="0">
+          <h4 id="ipad-title" class="gallery-category-title">iPad Paintings</h4>
+          <p class="gallery-help">Click a painting to view it full size.</p>
+          <div class="gallery-grid">
       <figure class="artwork">
         <a class="artwork-image" href="images/painting/hkust2.jpeg" data-gallery aria-label="View HKUST, Mar 2020">
           <img src="images/painting/hkust2.jpeg" width="1440" height="1080" alt="The HKUST campus beneath a blue sky" fetchpriority="high" decoding="async">
           <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
         </a>
         <figcaption>
-          <h3 class="artwork-title">HKUST</h3>
+          <h5 class="artwork-title">HKUST</h5>
           <time datetime="2020-03">Mar 2020</time>
         </figcaption>
       </figure>
@@ -55,7 +63,7 @@
           <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
         </a>
         <figcaption>
-          <h3 class="artwork-title">HKUST</h3>
+          <h5 class="artwork-title">HKUST</h5>
           <time datetime="2020-02">Feb 2020</time>
         </figcaption>
       </figure>
@@ -65,7 +73,7 @@
           <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
         </a>
         <figcaption>
-          <h3 class="artwork-title">Sunset</h3>
+          <h5 class="artwork-title">Sunset</h5>
           <time datetime="2020-07">Jul 2020</time>
         </figcaption>
       </figure>
@@ -75,7 +83,7 @@
           <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
         </a>
         <figcaption>
-          <h3 class="artwork-title">Wandering Earth and Jupyter</h3>
+          <h5 class="artwork-title">Wandering Earth and Jupyter</h5>
           <time datetime="2020-02">Feb 2020</time>
         </figcaption>
       </figure>
@@ -85,7 +93,7 @@
           <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
         </a>
         <figcaption>
-          <h3 class="artwork-title">Mountains</h3>
+          <h5 class="artwork-title">Mountains</h5>
           <time datetime="2018-01">Jan 2018</time>
         </figcaption>
       </figure>
@@ -95,7 +103,7 @@
           <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
         </a>
         <figcaption>
-          <h3 class="artwork-title">Little Prince</h3>
+          <h5 class="artwork-title">Little Prince</h5>
           <time datetime="2016-04">Apr 2016</time>
         </figcaption>
       </figure>
@@ -105,7 +113,7 @@
           <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
         </a>
         <figcaption>
-          <h3 class="artwork-title">Coco</h3>
+          <h5 class="artwork-title">Coco</h5>
           <time datetime="2018-01">Jan 2018</time>
         </figcaption>
       </figure>
@@ -115,7 +123,7 @@
           <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
         </a>
         <figcaption>
-          <h3 class="artwork-title">Earth</h3>
+          <h5 class="artwork-title">Earth</h5>
           <time datetime="2017-12">Dec 2017</time>
         </figcaption>
       </figure>
@@ -125,7 +133,7 @@
           <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
         </a>
         <figcaption>
-          <h3 class="artwork-title">Portrait</h3>
+          <h5 class="artwork-title">Portrait</h5>
           <time datetime="2016">2016</time>
         </figcaption>
       </figure>
@@ -135,11 +143,24 @@
           <span class="artwork-view" aria-hidden="true">View artwork ↗</span>
         </a>
         <figcaption>
-          <h3 class="artwork-title">Portrait</h3>
+          <h5 class="artwork-title">Portrait</h5>
           <time datetime="2017">2017</time>
         </figcaption>
       </figure>
-        </div>
+          </div>
+        </section>
+        <section id="oil-pastels" class="gallery-category" role="tabpanel" aria-labelledby="tab-oil-pastels" tabindex="0" hidden>
+          <h4 id="oil-pastels-title" class="gallery-category-title">Oil Pastels</h4>
+          <p class="gallery-empty">No paintings added yet.</p>
+        </section>
+        <section id="acrylic-markers" class="gallery-category" role="tabpanel" aria-labelledby="tab-acrylic-markers" tabindex="0" hidden>
+          <h4 id="acrylic-markers-title" class="gallery-category-title">Acrylic Markers</h4>
+          <p class="gallery-empty">No paintings added yet.</p>
+        </section>
+        <section id="watercolors" class="gallery-category" role="tabpanel" aria-labelledby="tab-watercolors" tabindex="0" hidden>
+          <h4 id="watercolors-title" class="gallery-category-title">Watercolors</h4>
+          <p class="gallery-empty">No paintings added yet.</p>
+        </section>
       </section>
     </main>
 

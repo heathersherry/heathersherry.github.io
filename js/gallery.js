@@ -1,4 +1,31 @@
-const artworks = [...document.querySelectorAll('[data-gallery]')];
+const categoryTabs = [...document.querySelectorAll('.gallery-tabs [role="tab"]')];
+
+function activateCategory(tab) {
+  categoryTabs.forEach(candidate => {
+    const selected = candidate === tab;
+    candidate.setAttribute('aria-selected', String(selected));
+    candidate.tabIndex = selected ? 0 : -1;
+    document.getElementById(candidate.getAttribute('aria-controls')).hidden = !selected;
+  });
+}
+
+categoryTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => activateCategory(tab));
+  tab.addEventListener('keydown', event => {
+    let nextIndex;
+    if (event.key === 'ArrowRight') nextIndex = (index + 1) % categoryTabs.length;
+    else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + categoryTabs.length) % categoryTabs.length;
+    else if (event.key === 'Home') nextIndex = 0;
+    else if (event.key === 'End') nextIndex = categoryTabs.length - 1;
+    else return;
+    event.preventDefault();
+    const nextTab = categoryTabs[nextIndex];
+    activateCategory(nextTab);
+    nextTab.focus({ preventScroll: true });
+  });
+});
+
+const artworkLinks = [...document.querySelectorAll('[data-gallery]')];
 const viewer = document.querySelector('.lightbox');
 const viewerImage = viewer.querySelector('.lightbox-image');
 const viewerTitle = viewer.querySelector('.viewer-title');
@@ -7,27 +34,29 @@ const viewerCount = viewer.querySelector('.viewer-count');
 const originalLink = viewer.querySelector('.viewer-original');
 const viewerControls = [...viewer.querySelectorAll('button, a[href]')];
 let currentIndex = 0;
+let currentArtworks = [];
 let opener;
 
 function showArtwork(index) {
-  currentIndex = (index + artworks.length) % artworks.length;
-  const link = artworks[currentIndex];
+  currentIndex = (index + currentArtworks.length) % currentArtworks.length;
+  const link = currentArtworks[currentIndex];
   const figure = link.closest('figure');
   viewerImage.src = link.href;
   viewerImage.alt = link.querySelector('img').alt;
   viewerTitle.textContent = figure.querySelector('.artwork-title').textContent;
   viewerDate.textContent = figure.querySelector('time').textContent;
-  viewerCount.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${artworks.length}`;
+  viewerCount.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${currentArtworks.length}`;
   originalLink.href = link.href;
 }
 
-artworks.forEach((link, index) => {
+artworkLinks.forEach(link => {
   link.setAttribute('aria-haspopup', 'dialog');
   link.addEventListener('click', event => {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     opener = link;
-    showArtwork(index);
+    currentArtworks = [...link.closest('[role="tabpanel"]').querySelectorAll('[data-gallery]')];
+    showArtwork(currentArtworks.indexOf(link));
     viewer.showModal();
     document.body.classList.add('viewer-open');
   });
